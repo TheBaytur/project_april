@@ -52,6 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
 
         title: Text(widget.title),
+        leading: Icon(Icons.notification_add, color: Colors.white,),
       ),
       body: Container(
         padding: EdgeInsets.all(50.0),
