@@ -38,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _incrementCounter() {
     setState(() {
-      
+
       _counter++;
     });
   }
@@ -53,9 +53,13 @@ class _MyHomePageState extends State<MyHomePage> {
 
         title: Text(widget.title),
       ),
-      body: Image.asset('assets/images/bg.jpg',
-      height: double.infinity,
-      fit:BoxFit.cover,
+      body: Column(
+        children: [
+          Image.asset('assets/images/bg.jpg',
+          fit:BoxFit.cover,
+          ),
+          Text('Flutter is fun',style: TextStyle(color: Colors.white,fontSize: 30),)
+        ],
       ),
 
       floatingActionButton: FloatingActionButton(
