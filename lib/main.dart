@@ -65,44 +65,11 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Container(
-          color: Colors.black38,
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-
-
-
-                    height: 100.0,
-                    width: 100,
-
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(25.0),
-                      color: Colors.red,
-                    ),
-                    child: Text('Hello', style: TextStyle(color: Colors.amber)),
-                  ),
-                  Container(
-                    height: 100.0,
-                    width: 100,
-
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(25.0),
-                      color: Colors.red,
-                    ),
-                    child: Text('Hello', style: TextStyle(color: Colors.amber)),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
+      body: Image.asset('assets/images/bg.jpg',
+      height: double.infinity,
+      fit:BoxFit.cover,
       ),
+
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
