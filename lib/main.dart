@@ -67,8 +67,13 @@ class _MyHomePageState extends State<MyHomePage> {
               TextStyle(color: Colors.white,fontSize: 30),)),
             ),
             ListTile(
+              leading: Icon(Icons.join_full),
               tileColor: Colors.red,
               title: Text("Ultramarine's champions"),
+              trailing: Text('Characteristics'),
+              onTap: (){
+                print('Clicked on tile');
+              },
             )
           ],
         ),
