@@ -7,7 +7,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -38,52 +37,40 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _incrementCounter() {
     setState(() {
-
       _counter++;
     });
   }
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
 
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-
         title: Text(widget.title),
-        leading: Icon(Icons.notification_add, color: Colors.white,),
+        leading: const Icon(Icons.notification_add, color: Colors.white),
       ),
+
       body: Container(
-        padding: EdgeInsets.all(50.0),
         child: Stack(
           children: [
-            Image.asset('assets/images/bg.jpg',
-            fit:BoxFit.cover,
-              height: 300,
-            ),
-            SizedBox( height: 300,
-              child: Center(child: Text('Kato Sicarius',style:
-              TextStyle(color: Colors.white,fontSize: 30),)),
-            ),
+          SizedBox(height: 300,
+          child: Center(
+            child: Text('Flutter'),
+          ),
+          ),
             ListTile(
               leading: Icon(Icons.join_full),
-              tileColor: Colors.red,
-              title: Text("Ultramarine's champions"),
-              trailing: Text('Characteristics'),
-              onTap: (){
-                print('Clicked on tile');
+              tileColor: Colors.amber,
+              title: Text('Somedata'),
+              trailing: Text('End Text'),
+              onTap: () {
+                print('Clicked');
               },
             )
-          ],
-        ),
-      ),
+        ]),
+      )
 
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
