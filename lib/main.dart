@@ -72,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
               title: Text("Ultramarine's champions"),
               trailing: Text('Characteristics'),
               onTap: (){
-                print('Clicked on tile');
+
               },
             )
           ],
