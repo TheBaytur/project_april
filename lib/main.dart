@@ -23,6 +23,18 @@ class MyApp extends StatelessWidget {
           title: Text('Flutter mapp'),
           centerTitle: true,
         ),
+        floatingActionButton: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            FloatingActionButton(onPressed: () {},
+              child: Icon(Icons.add),
+            ),
+            SizedBox(height: 10,),
+            FloatingActionButton(onPressed: () {},
+              child: Icon(Icons.remove),
+            ),
+          ],
+        ),
         bottomNavigationBar: NavigationBar(destinations: [
           NavigationDestination(icon: Icon(Icons.home),
             label: 'Home',
