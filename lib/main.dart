@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:project_april/views/widget_tree.dart';
 import 'package:project_april/views/widgets/navbar_widgets.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
