@@ -31,6 +31,8 @@ class MyWidget extends StatefulWidget {
 }
 
 class _MyWidgetState extends State<MyWidget> {
+
+  int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -38,6 +40,14 @@ class _MyWidgetState extends State<MyWidget> {
         title: Text('Flutter mapp'),
         centerTitle: true,
       ),
+      body: currentIndex == 0
+          ? Center(
+            child: Text('Home'),
+          )
+          : Center(
+            child: Text('Profile'),
+          ),
+
       bottomNavigationBar: NavigationBar(destinations: [
         NavigationDestination(icon: Icon(Icons.home),
           label: 'Home',
@@ -45,7 +55,15 @@ class _MyWidgetState extends State<MyWidget> {
         NavigationDestination(icon: Icon(Icons.person),
           label: 'Profile',
         ),
-      ],),
+      ],
+      onDestinationSelected: (int value) {
+        setState(() {
+          currentIndex = value;
+        });
+      },
+        selectedIndex: currentIndex,
+
+      ),
     );
   }
 }
