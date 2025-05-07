@@ -18,32 +18,35 @@ class MyApp extends StatelessWidget {
       brightness: Brightness.dark,
       ),
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Flutter mapp'),
-          centerTitle: true,
-        ),
-        floatingActionButton: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            FloatingActionButton(onPressed: () {},
-              child: Icon(Icons.add),
-            ),
-            SizedBox(height: 10,),
-            FloatingActionButton(onPressed: () {},
-              child: Icon(Icons.remove),
-            ),
-          ],
-        ),
-        bottomNavigationBar: NavigationBar(destinations: [
-          NavigationDestination(icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          NavigationDestination(icon: Icon(Icons.person),
-            label: 'Profile',
-          ),
-        ],),
-      ),
+      home: MyWidget()
     );
   }
 }
+
+class MyWidget extends StatefulWidget {
+  const MyWidget({super.key});
+
+  @override
+  State<MyWidget> createState() => _MyWidgetState();
+}
+
+class _MyWidgetState extends State<MyWidget> {
+  @override
+  Widget build(BuildContext context) {
+    return  Scaffold(
+      appBar: AppBar(
+        title: Text('Flutter mapp'),
+        centerTitle: true,
+      ),
+      bottomNavigationBar: NavigationBar(destinations: [
+        NavigationDestination(icon: Icon(Icons.home),
+          label: 'Home',
+        ),
+        NavigationDestination(icon: Icon(Icons.person),
+          label: 'Profile',
+        ),
+      ],),
+    );
+  }
+}
+
