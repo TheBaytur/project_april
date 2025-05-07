@@ -34,7 +34,10 @@ class _MyAppState extends State<MyApp> {
 
         ],
           onDestinationSelected: (int value){
-            selectedIndex = value;
+            setState(() {
+              selectedIndex = value;
+            });
+
           },
           selectedIndex: selectedIndex,
         ),
