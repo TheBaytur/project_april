@@ -18,6 +18,13 @@ class WidgetTree extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(title: Text('Flutter Mapp'),
+        actions: [
+          IconButton(
+            onPressed: () {},
+          icon: Icon(Icons.light_mode,
+          ),
+          ),
+        ],
       ),
       body: ValueListenableBuilder(valueListenable: selectedPageNotifier, builder: (context, selectedPage, child) {
         return pages.elementAt(selectedPage);
