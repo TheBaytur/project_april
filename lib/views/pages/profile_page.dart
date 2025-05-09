@@ -85,7 +85,22 @@ class _ProfilePageState extends State<ProfilePage> {
                 color: Colors.white12,
               ),
             ),
-       
+            ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.teal,
+                foregroundColor: Colors.white,
+              ),
+            child: Text('Click me'),
+      ),
+            FilledButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.teal,
+                foregroundColor: Colors.white,
+              ),
+              child: Text('Click me'),
+            ),
           ],
         ),
       ),
