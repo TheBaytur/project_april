@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatefulWidget {
-  const ProfilePage ({super.key});
+  const ProfilePage({super.key});
 
   @override
   State<ProfilePage> createState() => _ProfilePageState();
@@ -9,6 +9,8 @@ class ProfilePage extends StatefulWidget {
 
 class _ProfilePageState extends State<ProfilePage> {
   TextEditingController controller = TextEditingController();
+  bool? isChecked = false;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -17,13 +19,20 @@ class _ProfilePageState extends State<ProfilePage> {
         children: [
           TextField(
             controller: controller,
-            decoration: InputDecoration(border: OutlineInputBorder(),
-            ),
+            decoration: InputDecoration(border: OutlineInputBorder()),
             onEditingComplete: () {
               setState(() {});
             },
           ),
-          Text(controller.text)
+          Text(controller.text),
+          Checkbox(
+            value: isChecked,
+            onChanged: (bool? value) {
+              setState(() {
+                isChecked = value;
+              });
+            },
+          ),
         ],
       ),
     );
