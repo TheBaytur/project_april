@@ -90,7 +90,7 @@ class _ProfilePageState extends State<ProfilePage> {
             InkWell(
               splashColor: Colors.teal,
               onTap: () {
-                print('Image selected');
+                print('Image selected'); // Print
               },
               child: Container(
                 height: 200,
