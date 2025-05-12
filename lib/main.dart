@@ -4,7 +4,7 @@ import 'package:project_april/views/widget_tree.dart';
 import 'package:project_april/views/widgets/navbar_widgets.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MyApp()); //main
 }
 
 class MyApp extends StatefulWidget {
