@@ -8,7 +8,7 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
-  TextEditingController controller = TextEditingController();
+  TextEditingController controller = TextEditingController(); // usages
   bool? isChecked = false;
   bool isSwitched = false;
   double sliderValue = 0.0;
