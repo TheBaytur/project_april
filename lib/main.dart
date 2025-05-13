@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_april/data/notifiers.dart';
-import 'package:project_april/views/widget_tree.dart';
-import 'package:project_april/views/widgets/navbar_widgets.dart';
+import 'package:project_april/views/pages/welcome_page.dart';
+
 
 void main() {
   runApp(const MyApp()); //main
@@ -28,7 +28,7 @@ class _MyAppState extends State<MyApp> {
             brightness: isDarkMode ? Brightness.dark : Brightness.light,
           ),
         ),
-        home: WidgetTree(),
+        home: WelcomePage(),
       );
     });
   }
