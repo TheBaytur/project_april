@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:project_april/data/notifiers.dart';
 import 'package:project_april/views/pages/home_pages.dart';
+import 'package:project_april/views/pages/profile_page.dart';
 import 'package:project_april/views/pages/settings_page.dart';
 import 'package:project_april/views/widgets/navbar_widgets.dart';
 
 List<Widget> pages = [
   HomePage(),
-  SettingsPage(),
+  ProfilePage(),
 ];
 
 class WidgetTree extends StatelessWidget {
@@ -28,6 +29,13 @@ class WidgetTree extends StatelessWidget {
             );
           },),
           ),
+          IconButton(
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(
+                builder: (context) => SettingsPage())); // Navigate to the settings page using the Navigator.
+
+    }, icon: Icon(Icons.settings),
+    ),
         ],
       ),
       body: ValueListenableBuilder(valueListenable: selectedPageNotifier, builder: (context, selectedPage, child) {
