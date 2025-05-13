@@ -6,7 +6,7 @@ class HeroWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Hero(
-      tag: 'hero1',
+      tag: 'hero1', // need to tag each time
       child: ClipRRect(
         borderRadius: BorderRadius.circular(20.0),
         child: Image.asset('assets/images/bg.jpg'),
