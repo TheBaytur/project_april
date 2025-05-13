@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:project_april/data/notifiers.dart';
 import 'package:project_april/views/pages/home_pages.dart';
-import 'package:project_april/views/pages/profile_page.dart';
+import 'package:project_april/views/pages/settings_page.dart';
 import 'package:project_april/views/widgets/navbar_widgets.dart';
 
 List<Widget> pages = [
   HomePage(),
-  ProfilePage(),
+  SettingsPage(),
 ];
 
 class WidgetTree extends StatelessWidget {
