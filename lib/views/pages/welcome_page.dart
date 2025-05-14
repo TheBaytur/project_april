@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:project_april/views/widget_tree.dart';
+
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
 
@@ -13,6 +14,12 @@ class WelcomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Lottie.asset('assets/lotties/welcome.json'),
+            Text('Flutter Mapp', style: TextStyle(
+              fontSize: 30.0,
+              fontWeight: FontWeight.bold,
+                letterSpacing: 50.0,
+            ),
+            ),
             FilledButton(
               onPressed: () {
                 Navigator.pushReplacement(
