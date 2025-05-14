@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SettingsPage extends StatefulWidget {
-  const SettingsPage({super.key, required this.title,
-  });
+  const SettingsPage({super.key, required this.title});
 
   final String title;
 
@@ -20,9 +19,7 @@ class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          title: Text(widget.title),
-      ),
+      appBar: AppBar(title: Text(widget.title)),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
@@ -30,16 +27,25 @@ class _SettingsPageState extends State<SettingsPage> {
             children: [
               ElevatedButton(
                 onPressed: () {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(
-                        duration: Duration(seconds: 5),
-                        content: Text('Snackbar'),
-                        behavior: SnackBarBehavior.floating,
-                      ),
+                  showDialog(
+                    context: context,
+                    builder: (context) {
+                      return AlertDialog(
+                        title: Text('Alert Dialog'),
+                        content: Text('Alert Dialog'),
+                        actions: [
+                          FilledButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            child: Text('Close'),
+                          ),
+                        ],
+                      );
+                    },
                   );
                 },
-
-                child: Text('Open Snackbar'),
+                child: Text('Open Dialog'),
               ),
               DropdownButton(
                 value: menuItem,
