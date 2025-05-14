@@ -25,6 +25,12 @@ class _SettingsPageState extends State<SettingsPage> {
           padding: const EdgeInsets.all(20.0),
           child: Column(
             children: [
+              Divider(
+                color: Colors.white,
+                thickness: 5.0,
+              ),
+              Container(height:  50.0, child: VerticalDivider(),
+              ),
               ElevatedButton(
                 onPressed: () {
                   showDialog(
@@ -46,6 +52,7 @@ class _SettingsPageState extends State<SettingsPage> {
                   );
                 },
                 child: Text('Open Dialog'),
+
               ),
               DropdownButton(
                 value: menuItem,

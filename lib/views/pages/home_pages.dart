@@ -10,6 +10,20 @@ class HomePage extends StatelessWidget {
         child: Column(
             children: [
               HeroWidget(),
+              Container(
+                width: double.infinity,
+                padding: EdgeInsets.symmetric(vertical: 10.0),
+                child: Card(child: Padding(padding: EdgeInsets.all(20.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('Basic layout'),
+                    Text('The Description of this'),
+                  ],
+                ),
+                ),
+                ),
+              ),
               ],
               ),
     );
