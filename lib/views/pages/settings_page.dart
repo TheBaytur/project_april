@@ -28,6 +28,19 @@ class _SettingsPageState extends State<SettingsPage> {
           padding: const EdgeInsets.all(20.0),
           child: Column(
             children: [
+              ElevatedButton(
+                onPressed: () {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        duration: Duration(seconds: 5),
+                        content: Text('Snackbar'),
+                        behavior: SnackBarBehavior.floating,
+                      ),
+                  );
+                },
+
+                child: Text('Open Snackbar'),
+              ),
               DropdownButton(
                 value: menuItem,
                 items: [
@@ -58,7 +71,7 @@ class _SettingsPageState extends State<SettingsPage> {
               ),
               CheckboxListTile.adaptive(
                 tristate: true,
-                title: Text('Click me'),
+                title: Text('Open Snackbar'),
                 value: isChecked,
                 onChanged: (bool? value) {
                   setState(() {
@@ -105,14 +118,7 @@ class _SettingsPageState extends State<SettingsPage> {
                   color: Colors.white12,
                 ),
               ),
-              ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.teal,
-                  foregroundColor: Colors.white,
-                ),
-                child: Text('Click me'),
-              ),
+
               FilledButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
