@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project_april/views/widgets/hero_widget.dart';
 
-TextEditingController controller = TextEditingController();
+
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -11,11 +11,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  @override
-  void initState() {
-    print('ClickedDDDDDDDD');
-    super.initState();
-  }
+  TextEditingController controller = TextEditingController();
 
   @override
   dispose() {
