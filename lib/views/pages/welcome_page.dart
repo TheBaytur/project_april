@@ -14,11 +14,13 @@ class WelcomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Lottie.asset('assets/lotties/welcome.json'),
-            Text('Flutter Mapp', style: TextStyle(
-              fontSize: 30.0,
-              fontWeight: FontWeight.bold,
-                letterSpacing: 50.0,
-            ),
+            FittedBox(
+              child: Text('Flutter Mapp', style: TextStyle(
+                fontSize: 30.0,
+                fontWeight: FontWeight.bold,
+                  letterSpacing: 50.0,
+              ),
+              ),
             ),
             FilledButton(
               onPressed: () {
