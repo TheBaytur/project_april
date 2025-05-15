@@ -31,7 +31,7 @@ class WelcomePage extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return WidgetTree();
+                    return LoginPage();
                     },
                 ),
               );
@@ -47,7 +47,7 @@ class WelcomePage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return WidgetTree();
+                      return LoginPage();
                     },
                   ),
                 );

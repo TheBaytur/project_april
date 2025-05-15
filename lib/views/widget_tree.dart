@@ -7,8 +7,8 @@ import 'package:project_april/views/widgets/navbar_widgets.dart';
 
 List<Widget> pages = [HomePage(), ProfilePage()];
 
-class WidgetTree extends StatelessWidget {
-  const WidgetTree({super.key});
+class LoginPage extends StatelessWidget {
+  const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
