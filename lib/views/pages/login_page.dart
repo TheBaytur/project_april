@@ -13,6 +13,8 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   TextEditingController controllerEmail = TextEditingController();
   TextEditingController controllerPassword = TextEditingController();
+  String confirmedEmail = '123';
+  String confirmedPassword = '123';
 
   @override
   dispose() {
@@ -57,19 +59,12 @@ class _LoginPageState extends State<LoginPage> {
             ),
             SizedBox(height: 20.0,
             ),
-            FilledButton(
+            ElevatedButton(
               onPressed: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return WidgetTree();
-                    },
-                  ),
-                );
+                onLoginPressed ();
               },
-              style: FilledButton.styleFrom(
-                minimumSize: Size(double.infinity, 50.0),
+              style: ElevatedButton.styleFrom(
+                minimumSize: Size(double.infinity, 40.0),
               ),
               child: Text('Login'),
             ),
@@ -77,5 +72,19 @@ class _LoginPageState extends State<LoginPage> {
         ),
       ),
     );
+  }
+
+  void onLoginPressed() {
+    if (controllerEmail.text == confirmedEmail &&
+        controllerPassword.text == confirmedPassword) {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) {
+            return WidgetTree();
+          },
+        ),
+      );
+    }
   }
 }
