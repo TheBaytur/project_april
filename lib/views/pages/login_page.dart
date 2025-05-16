@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_april/views/widgets/hero_widget.dart';
+import 'package:project_april/views/widget_tree.dart';
 
 
 class LoginPage extends StatefulWidget {
@@ -42,7 +43,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
               onEditingComplete: () => {setState(() {})},
             ),
-            SizedBox(height: 20.0,
+            SizedBox(height: 10.0,
             ),
             TextField(
               controller: controllerPassword,
@@ -53,6 +54,24 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
               onEditingComplete: () => {setState(() {})},
+            ),
+            SizedBox(height: 20.0,
+            ),
+            FilledButton(
+              onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return WidgetTree();
+                    },
+                  ),
+                );
+              },
+              style: FilledButton.styleFrom(
+                minimumSize: Size(double.infinity, 50.0),
+              ),
+              child: Text('Login'),
             ),
           ],
         ),
