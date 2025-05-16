@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:project_april/data/constants.dart';
 import 'package:project_april/data/notifiers.dart';
 import 'package:project_april/views/pages/home_pages.dart';
 import 'package:project_april/views/pages/profile_page.dart';
 import 'package:project_april/views/pages/settings_page.dart';
 import 'package:project_april/views/widgets/navbar_widgets.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 List<Widget> pages = [HomePage(), ProfilePage()];
 
@@ -17,8 +19,12 @@ class WidgetTree extends StatelessWidget {
         title: Text('Flutter Mapp'),
         actions: [
           IconButton(
-            onPressed: () {
+            onPressed: () async {
               isDarkMode.value = !isDarkMode.value;
+              final SharedPreferences prefs =
+              await SharedPreferences.getInstance();
+              await prefs.setBool(KConstants.themeModeKey, isDarkMode.value);
+
             },
             icon: ValueListenableBuilder(
               valueListenable: isDarkMode,
