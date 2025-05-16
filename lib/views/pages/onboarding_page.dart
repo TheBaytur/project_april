@@ -22,14 +22,13 @@ class OnBoardingPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Lottie.asset('assets/lotties/home.json', height: 400.0),
+                Lottie.asset('assets/lotties/welcome1.json', height: 400.0),
 
-                SizedBox(height: 20.0),
                   Text('Flutter Mapp',
                     style: KTextStyle.descriptionTealText,
                     textAlign: TextAlign.justify,
                   ),
-
+                SizedBox(height: 20.0),
                 FilledButton(
                   onPressed: () {
                     Navigator.push(
