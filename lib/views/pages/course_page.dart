@@ -6,12 +6,15 @@ class CoursePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20.0),
-      child: SingleChildScrollView(
-        child: Column(children: [HeroWidget(title: 'Course Page',
-        ),
-        ],
+    return Scaffold(
+      appBar: AppBar(),
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 20.0),
+        child: SingleChildScrollView(
+          child: Column(children: [HeroWidget(title: 'Course Page',
+          ),
+          ],
+          ),
         ),
       ),
     );
