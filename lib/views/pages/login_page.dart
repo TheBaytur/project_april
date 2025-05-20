@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:project_april/views/widget_tree.dart';
 
-
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key,
     required this.title});

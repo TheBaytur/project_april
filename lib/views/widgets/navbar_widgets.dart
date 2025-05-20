@@ -19,7 +19,6 @@ class NavbarWidget extends StatelessWidget {
           },
           selectedIndex: selectedPage,
         );
-
     });
   }
 }

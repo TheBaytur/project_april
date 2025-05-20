@@ -4,7 +4,6 @@ class HeroWidget extends StatelessWidget {
   const HeroWidget({super.key,
   required this.title,
     this.nextPage,
-
   });
 
   final String title;
