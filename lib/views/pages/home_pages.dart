@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_april/data/constants.dart';
+import 'package:project_april/views/pages/course_page.dart';
 import 'package:project_april/views/widgets/container_widget.dart';
 import 'package:project_april/views/widgets/hero_widget.dart';
 
@@ -19,7 +20,10 @@ class HomePage extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            HeroWidget(title: 'LOGIN'),
+            HeroWidget(
+                title: 'LOGIN',
+                nextPage: CoursePage(),
+            ),
             ...List.generate(list.length, (index) {
               return ContainerWidget(
                 title: list.elementAt(index),
