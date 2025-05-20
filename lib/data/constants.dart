@@ -14,3 +14,10 @@ class KTextStyle {
   static const TextStyle descriptionTealText = TextStyle(
       fontSize: 16.0);
 }
+
+class KValue {
+  static const String basicLayout = 'Basic Layout';
+  static const String cleanUi = 'Clean UI';
+  static const String fixedBug = 'Fixed Bugs';
+  static const String testDemo = 'Test Demo';
+}
