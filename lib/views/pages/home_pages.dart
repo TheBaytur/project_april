@@ -17,15 +17,12 @@ class HomePage extends StatelessWidget {
           children: [
             HeroWidget(title: 'LOGIN',
             ),
-            ContainerWidget(title: 'Basic Layout',
-              description: 'This is a basic layout',
-            ),
-            ContainerWidget(title: 'Basic Layout',
-              description: 'This is a basic layout',
-            ),
-            ContainerWidget(title: 'Basic Layout',
-              description: 'This is a basic layout',
-            ),
+            ...List.generate(10, (index) => ContainerWidget(
+              title: 'Title $index',
+              description: 'Description $index',
+            ))
+
+
 
           ],
         ),
