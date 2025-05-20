@@ -15,7 +15,6 @@ class ContainerWidget extends StatelessWidget {
       width: double.infinity,
       padding: EdgeInsets.symmetric(vertical: 2.0),
       child: Card(
-
         child: Padding(
           padding: EdgeInsets.all(20.0),
           child: Column(
@@ -23,7 +22,6 @@ class ContainerWidget extends StatelessWidget {
             children: [
               Text(title,
                   style: KTextStyle.titleTealText),
-
               Text(
                 description,
                 style: KTextStyle.descriptionTealText,
