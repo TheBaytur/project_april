@@ -19,7 +19,9 @@ class HomePage extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 20.0),
       child: SingleChildScrollView(
         child: Column(
+
           children: [
+            SizedBox(height: 10.0),
             HeroWidget(
                 title: 'LOGIN',
                 nextPage: CoursePage(),
