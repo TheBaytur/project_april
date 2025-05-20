@@ -9,6 +9,10 @@ class ProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(padding: EdgeInsets.all(20.0),
       child: Column(children: [
+        CircleAvatar(
+          radius: 50.0,
+          backgroundImage: AssetImage('assets/images/bg.jpg'),
+        ),
         ListTile(title: Text('Logout'),
           onTap: (){
           selectedPageNotifier.value = 0;
