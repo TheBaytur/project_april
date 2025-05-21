@@ -8,7 +8,43 @@ class ExpandedFlexiblePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: Column(
-
+        children: [
+          Row(children: [
+            Expanded(
+              flex: 1,
+              child: Container(
+                height: 100.0,
+                color: Colors.red,
+              ),
+            ),
+            Flexible(
+              flex: 1,
+              child: Container(
+                height: 100.0,
+                color: Colors.green,
+              ),
+            ),
+          ],
+          ),
+          Divider(),
+          Row(children: [
+            Flexible(
+              flex: 1,
+              child: Container(
+                height: 100.0,
+                color: Colors.green,
+              ),
+            ),
+            Expanded(
+              flex: 1,
+              child: Container(
+                height: 100.0,
+                color: Colors.red,
+              ),
+            ),
+          ],
+          ),
+        ],
       ),
     );
   }
