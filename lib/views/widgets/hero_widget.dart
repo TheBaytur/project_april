@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 class HeroWidget extends StatelessWidget {
   const HeroWidget({super.key,
   required this.title,
-    this.nextPage,
-  });
+    this.nextPage,});
 
   final String title;
   final Widget? nextPage;
