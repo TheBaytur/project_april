@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_april/views/pages/expanded_flexible_page.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key, required this.title});
@@ -117,13 +118,13 @@ class _SettingsPageState extends State<SettingsPage> {
                   setState(() {
                     sliderValue = value;
                   });
-                  print(value);
+
                 },
               ),
               InkWell(
                 splashColor: Colors.teal,
                 onTap: () {
-                  print('Image selected');
+
                 },
                 child: Container(
                   height: 200,
@@ -133,12 +134,21 @@ class _SettingsPageState extends State<SettingsPage> {
               ),
 
               FilledButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return ExpandedFlexiblePage();
+                      },
+                    ),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.teal,
                   foregroundColor: Colors.white,
                 ),
-                child: Text('Click me'),
+                child: Text('Show flexible and Expanded'),
               ),
             ],
           ),
